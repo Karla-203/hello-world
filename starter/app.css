@@ -1,0 +1,21 @@
+body{
+    background-color: #FFE7A4;
+}
+
+.thumbnail{
+    background-color: rgb(255, 200, 122) ;
+}
+
+.jumbotron{
+    background-color: rgb(255, 200, 122) ;;
+}
+
+#my-button{
+    background-color: #714100;
+    color: white;
+}
+/* 
+img{
+    height: 400px;
+    width: 400px;
+} */
