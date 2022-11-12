@@ -88,3 +88,69 @@ submitButton.addEventListener('click',()=>{
 })
 
 generateDessertTable(dessertList);
+
+fetch("https//swapi.dev/api/people/1").then(response=>{
+    //console.log(response);
+    response.json().then(data=>{
+        console.log(data);
+    })
+});
+
+fetch("https//swapi.dev/api/people/-o").then(response=>{
+    console.log(response);
+}).catch(erro=>{
+    console.log(error);
+});
+
+let apiInput = document.querySelector("#api-input");
+let apiButton = document.querySelector("#api-button");
+let apiResult = document.querySelector("#api-result");
+
+const apiURL = 'https://swapi.dev/api/people/'
+
+apiButton.addEventListener("click", async ()=>{
+    //get character ID value
+    let charID = apiInput.value;
+
+    //ensure that this input is there
+    if(charID===''){
+        return;
+    }
+
+    // make API GET request
+    const response = await fetch(apiURL+charID)
+    
+    // check if success
+    if(!response.ok){
+        //handle error
+
+    }
+    else{
+        //display name
+        addErrorBar();
+
+    }
+
+    // display name
+    let character = await response.json();
+    addCharacterName
+
+});
+
+function addErrorBar({
+    //remove html from area
+    apiResult.innerHTML ="";
+
+    //add an error bar
+    apiResult.innerHTML ='<div class="alert alert-warning" role="alert">This ID was not found</div>'
+
+
+})
+
+function addCharacterName(character){
+    //remove HTML from area
+    apiResult.innerHTML = "";
+
+    // display character in area
+    apiResult.innerHTML = ['name'];
+}
