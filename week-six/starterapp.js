@@ -137,15 +137,13 @@ apiButton.addEventListener("click", async ()=>{
 
 });
 
-function addErrorBar({
+function addErrorBar(
     //remove html from area
-    apiResult.innerHTML ="";
+    apiResult.innerHTML = "";
 
     //add an error bar
     apiResult.innerHTML ='<div class="alert alert-warning" role="alert">This ID was not found</div>'
-
-
-})
+)
 
 function addCharacterName(character){
     //remove HTML from area
